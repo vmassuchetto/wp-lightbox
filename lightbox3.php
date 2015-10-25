@@ -99,7 +99,7 @@ function bawlb3_style_script() {
   wp_register_style( 'bawlb3_css', plugins_url( '/Themes/' . $bawlb3_theme . '/lightbox.css', __FILE__ ) );
   wp_enqueue_style( 'bawlb3_css');
 
-  if ( get_option( 'bawlb3_resize_on_demand' ) == 'on' ) {
+  if ( get_option( 'bawlb3_resize_on_demand' ) == 1 ) {
   	$stimuli_lightbox_js = 'lightbox-resize.js';
   } else {
   	$stimuli_lightbox_js = 'lightbox.js';
@@ -120,7 +120,7 @@ function bawlb3_autoexpand_rel_lightbox($content) {
 }
 
 /* Actions si l'option est cochée */
-if ( get_option( 'bawlb3_automate' ) == 'on') {
+if ( get_option( 'bawlb3_automate' ) == 1) {
 	add_action( 'the_content', 'bawlb3_autoexpand_rel_lightbox', 99 );
 	add_action( 'the_excerpt', 'bawlb3_autoexpand_rel_lightbox', 99 );
 }
@@ -165,13 +165,13 @@ echo "\n" .'</select>';
 		<tr valign="baseline">
         <th scope="row"><?php _e( 'Auto-lightbox image links', 'lightbox_3' ) ?></th>
         <td>
-          <input type="checkbox" name="bawlb3_automate" <?php checked( get_option( 'bawlb3_automate' ), 'on' ); ?> />
+          <input type="checkbox" name="bawlb3_automate" <?php checked( get_option( 'bawlb3_automate' ), 1 ); ?> />
         <p><small><?php _e( 'Let the plugin add necessary html to image links', 'lightbox_3' ) ?></small></p>
         </td>
         <tr valign="baseline">
         <th scope="row"><?php _e( 'Shrink large images to fit smaller screens', 'lightbox_3' ) ?></th>
         <td>
-          <input type="checkbox" name="bawlb3_resize_on_demand" <?php checked( get_option( 'bawlb3_resize_on_demand' ), 'on' ); ?> />
+          <input type="checkbox" name="bawlb3_resize_on_demand" <?php checked( get_option( 'bawlb3_resize_on_demand' ), 1 ); ?> />
         <p><small><?php _e( 'Note: <u>Excessively large images</u> waste bandwidth and slow browsing!', 'lightbox_3' ) ?></small></p>
         </td>
         </tr>
