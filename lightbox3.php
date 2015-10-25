@@ -165,7 +165,7 @@ echo "\n" .'</select>';
 		<tr valign="baseline">
         <th scope="row"><?php _e( 'Auto-lightbox image links', 'lightbox_3' ) ?></th>
         <td>
-          <input type="checkbox" name="bawlb3_automate" <?php checked( get_option( 'bawlb3_automate' ), 'on' ); ?> />
+          <input type="checkbox" name="bawlb3_automate" <?php checked( get_option( 'bawlb3_automate' ), 1 ); ?> />
         <p><small><?php _e( 'Let the plugin add necessary html to image links', 'lightbox_3' ) ?></small></p>
         </td>
         <tr valign="baseline">
