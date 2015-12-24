@@ -70,7 +70,7 @@ if ( isset( $_GET['uninstall_lb2'] ) )
 function bawlb3_default_values()
 {
   update_option( 'bawlb3_theme', 'Black' );
-  update_option( 'bawlb3_automate', 1 );
+  update_option( 'bawlb3_automate', 'on' );
   update_option( 'bawlb3_resize_on_demand', 0 );
 }
 register_activation_hook( __FILE__, 'bawlb3_default_values' );
